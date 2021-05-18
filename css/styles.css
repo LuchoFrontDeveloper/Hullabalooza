@@ -1,0 +1,586 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Hace un scroll mas suave */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #bebebe;
+    --principal: #672ce7;
+    --spotify: #1db954;
+    --youtube: #ff0000;
+}
+
+/** GLOBAL **/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url(../img/blackorchid/blackorchid/blackorchid.png);
+}
+
+p::selection {
+    background-color: var(--principal);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2::selection {
+    background-color: var(--principal);
+}
+
+h3::selection {
+    background-color: var(--black);
+}
+
+h4 {
+    color: var(--principal);
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h4::selection {
+    background-color: var(--black);
+}
+
+.mrg {
+    margin: 20rem 0rem 45rem 0rem;
+}
+
+/** HEADER **/
+
+.cover__page {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/music.jpg);
+    background-position: center;
+    background-size: cover;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover__page h1 {
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 12rem;
+    z-index: 1; /* Superpone sobre el elemento padre */
+    text-shadow: -1.5rem 1.3rem 0.2rem var(--black);
+    transition: 0.3s;
+}
+
+.cover__page h3 {
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 1; /* Superpone sobre el elemento padre */    
+}
+
+.cover__page a {
+    background-color: var(--principal);
+    color: var(--white);
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin-top: 5rem;
+    opacity: 0.9;
+}
+
+.cover__page img {
+    width: 15%;
+}
+
+.cover__page a:hover {    
+    background-color: var(--white);
+    color: var(--principal);
+    transition: 0.3s;
+    font-size: 1.8rem;
+}
+
+.cover__page span {
+    color: var(--principal);
+    text-shadow: 0.5rem 0.1rem 0rem var(--black);
+    font-size: 5rem;
+}
+
+.cover__page span::selection {
+    background-color: var(--black);
+}
+
+/** BUTTON **/
+
+.button__ticket .button {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.3s;
+}
+
+.fa-ticket-alt {
+    margin-left: 0.8rem;
+}
+
+/** TITLE **/
+
+.cover__page h1:hover {
+    color: var(--principal);
+    text-shadow: -0.5rem 0.3rem 0.2rem var(--white);
+    transition: 0.3s;       
+}
+
+.cover__page h1::selection {
+    background-color: var(--black);
+}
+
+/** OPACITY **/
+
+.bg__opacity {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--black);
+    opacity: 0.6;
+}
+
+/** NAVBAR **/
+
+.navbar {
+    background-color: var(--principal);
+    position: fixed;
+    left: 36%;
+    z-index: 1;  
+    margin-top: 3rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;   
+}
+
+.navigation__list {
+    list-style: none;
+    display: flex;    
+}
+
+.navigation__list li {
+    margin-right: 5rem;
+    font-weight: 700; 
+    color: inherit; 
+    text-transform: uppercase; 
+    color: var(--white);
+    transition: 0.3s; 
+}
+
+.navigation__list li:hover {
+    color: var(--black);
+    transition: 0.2s;    
+}
+
+/** MAIN ABOUT US**/
+
+.section__about-us {
+   display: flex;
+   justify-content: center;
+   color: var(--gray);
+    
+}
+
+.section__about-us p {    
+    text-align: justify;
+    font-size: 2rem;
+}
+
+.card__about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;    
+    border-radius: 2%;
+    padding: 2%;
+    line-height: 3rem; 
+    margin-left: 5%;
+    transition: 0.4s;   
+}
+
+.card__about-us:hover {
+    border: 0.1rem solid var(--black);
+    box-shadow: 0px 0px 29px 0px rgba(103,44,231,1);
+    transition: 0.1s;
+}
+
+.map img {
+    width: 80%;
+    margin: 18% 0 1% 10%;
+    border-radius: 2%;
+    transition: 0.5s;
+}
+
+.map img:hover {
+    box-shadow: 0px 0px 29px 0px rgba(103,44,231,1);
+    transition: 0.2s;
+}
+
+.map p {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.map p:hover {
+    color: var(--principal);
+    transition: 0.2s;
+}
+
+/** MAIN BANDS**/
+
+.bands {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bands p {
+    margin-bottom: 0;
+}
+
+.music {
+    margin-bottom: 10rem;
+}
+
+.music h2 {
+    color: var(--gray);
+}
+
+.spotify__youtube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.spotify__youtube .fa-spotify {
+    color: var(--principal);
+    font-size: 14rem;   
+    transition: 0.4s;
+}
+
+.spotify__youtube .fa-spotify:hover {
+    color: var(--spotify);
+    transition: 0.3s;
+}
+
+.spotify__youtube .fa-youtube {
+    color: var(--principal);
+    font-size: 14rem;
+    transition: 0.4s;
+}
+
+.spotify__youtube .fa-youtube:hover {
+    color: var(--youtube);
+    transition: 0.3s;
+}
+
+/** GREEN DAY**/
+
+.bands .green-day {
+    
+    width: 18%;
+    color: var(--gray);
+    padding: 3rem;
+    text-align: justify;
+    line-height: 3rem;
+    font-size: 1.8rem;
+    background-color: var(--black);
+    opacity: 0.8;
+    border-radius: 3%;
+    transition: 0.5s;
+}
+
+.bands .green-day:hover {
+    box-shadow: 0px 0px 29px 0px rgba(103,44,231,1);
+    transition: 0.1s;
+    border: 0.2rem solid var(--principal);
+}
+
+.bands .green-day img {
+    width: 90%;
+}
+
+.bands .green-day h3 {
+    font-weight: 400;
+    text-align: center;
+}
+
+/** BLINK 182 **/
+
+.bands .blink-182 {
+    
+    width: 18%;
+    color: var(--gray);
+    padding: 3rem;
+    text-align: justify;
+    line-height: 3rem;
+    font-size: 1.8rem;
+    background-color: var(--black);
+    opacity: 0.8;
+    border-radius: 3%;
+    transition: 0.5s;
+    
+}
+
+.bands .blink-182:hover {
+    box-shadow: 0px 0px 29px 0px rgba(103,44,231,1);
+    transition: 0.1s;
+    border: 0.2rem solid var(--principal);
+}
+
+.bands .blink-182 img {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.bands .blink-182 h3 {
+    font-weight: 400;
+    text-align: center;
+}
+
+/** FORM **/
+
+form {
+
+    color: var(--gray);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;  
+    border: 0.2rem solid var(--principal);     
+    width: 95%;
+    margin-left: 2%;
+    margin-bottom: 9rem;
+}
+
+form h3 {
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 5rem;  
+    text-align: center; 
+}
+
+form h3::selection {
+    color: var(--principal);
+}
+
+form input {
+    border-radius: 0.5rem;
+    margin: 0.5rem 0rem;
+    background-color: var(--gray);
+    color: var(--principal);    
+    border: 0.2rem solid var(--gray);
+    transition: 0.3s;
+}
+
+form input:hover {
+    border: 0.2rem solid var(--principal);
+    transition: 0.3s;
+}
+
+form input::placeholder {
+    text-align: center;  
+    color: var(--black); 
+    font-weight: 700; 
+}
+
+form textarea {
+    width: 50%;
+    height: 120%;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: var(--gray);
+    color: var(--principal);
+    border: 0.2rem solid var(--gray);
+    transition: 0.3s;
+}
+
+form textarea:hover {
+    border: 0.2rem solid var(--principal);
+    transition: 0.3s;
+}
+
+form textarea::placeholder {
+    color: var(--black); 
+    font-weight: 700; 
+}
+
+.form__name {
+    margin: 1rem 0rem;
+}
+
+.form__email {
+    margin: 1rem 0rem;
+}
+
+.form__text {
+    margin: 1rem 0rem;
+}
+
+.button__send {
+    margin: 5rem 0rem; 
+}
+
+.button__send a {
+    display: inline-block;
+    background-color: var(--principal);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--gray);
+    transition: 0.3s;  
+}
+
+.button__send a:hover {
+    background-color: var(--gray);
+    transition: 0.3s;
+    color: var(--principal);
+}
+
+/** FOOTER **/
+
+.footer__contact {
+    background-color: var(--black);
+    padding: 5rem;
+    color: var(--principal);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social__media {
+    font-size: 5rem;       
+}
+
+.social__media i {
+    margin-right: 5rem;
+    color: var(--principal);
+    transition: 0.3s;
+}
+
+.social__media p {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.social__media p::selection {
+    color: var(--black);
+}
+
+.social__media span {
+    color: var(--gray);
+}
+
+.social__media span::selection {
+    color: var(--principal);
+}
+
+.social__media a:visited {
+    color: var(--principal);
+}
+
+.social__media .fa-whatsapp-square {
+    margin-right: 0;
+}
+
+.form__text .reserved {
+    margin-top: 0;
+}
+
+.footer__text p::selection {
+    color: var(--black);
+}
+
+.help p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 4rem 0rem 0rem 0rem;    
+}
+
+.help__information {
+    margin-top: 2rem;
+}
+
+.help p::selection {
+    color: var(--black);
+}
+
+.help ul {
+    padding: 0;
+}
+
+.help ul li {
+    list-style: none;
+}
+
+.help ul li a {
+    color: var(--principal);
+    transition: 0.3s;
+}
+
+.help a {
+    display: inline-block;
+}
+
+.help__contact {
+    margin-bottom: 2rem;
+}
+
+.help a:hover {
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+.help a::selection {
+    background-color: var(--principal);
+    color: var(--black);
+}
+
+.fa-facebook-square:hover {
+    color: var(--gray);
+}
+
+.fa-twitter-square:hover {
+    color: var(--gray);
+}
+
+.fa-instagram-square:hover {
+    color: var(--gray);
+}
+
+.fa-whatsapp-square:hover {
+    color: var(--gray);
+}
+
+
+
+
